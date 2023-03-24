@@ -85,5 +85,12 @@ const posts = [
 
 //Creiamo il nostro array di oggetti che rappresentano ciascun post.
 
-const {content, likes} = posts
-cons
+let postObjects;
+
+for (let i = 0; i < posts.length; i++) {
+    postObjects = posts[i];
+    console.log(postObjects)
+    const {id, content} = postObjects
+    console.log(id, content, 'ciao')
+}
+
