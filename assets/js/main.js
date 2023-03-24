@@ -90,7 +90,14 @@ let postObjects;
 for (let i = 0; i < posts.length; i++) {
     postObjects = posts[i];
     console.log(postObjects)
-    const {id, content} = postObjects
-    console.log(id, content, 'ciao')
+
 }
 
+//recupero gli elementi dall'array di oggetti
+
+const {id, content, media, author, likes ,created} = posts
+
+
+
+const post1 = [posts[0]['id'], posts[0]['media'], posts[0]['author'], posts[0]['likes'], posts[0]['created']]
+console.log(post1, 'eccomi sono il primo post')
