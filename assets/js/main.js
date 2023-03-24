@@ -100,4 +100,89 @@ const {id, content, media, author, likes ,created} = posts
 
 
 const post1 = [posts[0]['id'], posts[0]['media'], posts[0]['author'], posts[0]['likes'], posts[0]['created']]
-console.log(post1, 'eccomi sono il primo post')
+
+
+const post2 = [posts[1]['id'], posts[1]['media'], posts[1]['author'], posts[1]['likes'], posts[1]['created']]
+
+
+const post3 = [posts[2]['id'], posts[2]['media'], posts[2]['author'], posts[2]['likes'], posts[2]['created']]
+
+
+const post4 = [posts[3]['id'], posts[3]['media'], posts[3]['author'], posts[3]['likes'], posts[3]['created']]
+
+
+const post5 = [posts[4]['id'], posts[4]['media'], posts[4]['author'], posts[4]['likes'], posts[4]['created']]
+
+
+
+const postArray = [
+    post1,
+
+    post2,
+
+    post3,
+
+    post4,
+
+    post5
+]
+
+console.log(postArray)
+//stampo i post nella dom(feed)
+
+//seleziono il container nella dom
+
+const containerElement = document.getElementById('container')
+console.log(containerElement)
+
+//creo una variabile in cui scrivo gia il markup
+
+
+
+
+                            
+
+    //ciclo per stampare i post nella dom
+    
+    
+for (let i = 0; i < postArray.length; i++) {
+     const postSrc = postArray[i];
+     const postInTheDom = ` <div class="post">
+                            <div class="post__header">
+                                <div class="post-meta">                    
+                                    <div class="post-meta__icon">
+                                        <img class="profile-pic" src="https://unsplash.it/300/300?image=15" alt="Phil Mangione">                    
+                                    </div>
+                                    <div class="post-meta__data">
+                                        <div class="post-meta__author">Phil Mangione</div>
+                                        <div class="post-meta__time">4 mesi fa</div>
+                                    </div>                    
+                                </div>
+                            </div>
+                            <div class="post__text">Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.</div>
+                            <div class="post__image">
+                                <img src="https://unsplash.it/600/300?image=171" alt="">
+                            </div>
+                            <div class="post__footer">
+                                <div class="likes js-likes">
+                                    <div class="likes__cta">
+                                        <a class="like-button  js-like-button" href="#" data-postid="1">
+                                            <i class="like-button__icon fas fa-thumbs-up" aria-hidden="true"></i>
+                                            <span class="like-button__label">Mi Piace</span>
+                                        </a>
+                                    </div>
+                                    <div class="likes__counter">
+                                        Piace a <b id="like-counter-1" class="js-likes-counter">80</b> persone
+                                    </div>
+                                </div> 
+                            </div>            
+                            </div>`
+
+    containerElement.insertAdjacentHTML('beforeend', postInTheDom)
+    
+}
+
+
+
+
+
